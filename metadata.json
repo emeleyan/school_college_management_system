@@ -1,0 +1,6 @@
+{
+  "name": "School & College Management ERP",
+  "description": "Offline-first dual-institute ERP system for School and College management with IndexedDB storage, Phase 13 Report Center & Phase 14 System Backup, Restore, Disaster Recovery, SHA-256 Checksum Validation, and Local Rollback Checkpoints.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

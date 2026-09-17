@@ -1,0 +1,22 @@
+[
+  {
+    "id": "update_1789664994336",
+    "timestamp": "2026-09-17T17:09:54.336Z",
+    "previousVersion": "2.4.0",
+    "newVersion": "2.4.1",
+    "totalFilesExtracted": 2,
+    "skippedProtectedFilesCount": 3,
+    "skippedProtectedFiles": [
+      ".env.production",
+      "data/student_records.db",
+      "database/sample_school_db.sqlite"
+    ],
+    "sampleUpdatedFiles": [
+      "public/release_notes.txt",
+      "src/version.json"
+    ],
+    "packageSizeKb": 1,
+    "status": "SUCCESS",
+    "databaseIntact": true
+  }
+]

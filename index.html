@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Ensure window.fetch has both getter and setter so environment scripts can safely patch or intercept it
+      (function() {
+        try {
+          var currentFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return currentFetch;
+            },
+            set: function(fn) {
+              currentFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // ignore if already non-configurable
+        }
+        try {
+          var savedTheme = localStorage.getItem('erp_theme_pref');
+          if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <title>School &amp; College Management ERP</title>
+    <meta name="description" content="Offline-first dual-institute ERP system for School and College management with IndexedDB storage, Phase 13 Report Center &amp; Phase 14 System Backup, Restore, Disaster Recovery, SHA-256 Checksum Validation, and Local Rollback Checkpoints." />
+    <meta property="og:title" content="School &amp; College Management ERP" />
+    <meta property="og:description" content="Offline-first dual-institute ERP system for School and College management with IndexedDB storage, Phase 13 Report Center &amp; Phase 14 System Backup, Restore, Disaster Recovery, SHA-256 Checksum Validation, and Local Rollback Checkpoints." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
